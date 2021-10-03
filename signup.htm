@@ -1,0 +1,70 @@
+<html>
+<head>
+    <title>Heartbeat - Sign up</title>
+    <link rel="stylesheet" href="signup.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Carattere&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <center><div id="head">Sign Up</div></center>
+    <center><div class="box">
+    <form method="POST" action="signup.php" name="frm" onsubmit="return validatesignup()">
+        <br>
+        <label for="txt1" style="margin-left:-268px;">First Name</label><br>
+        <input type="text" name="txt1" placeholder="Your name.."><br><br>
+        <label for="txt2" style="margin-left:-270px;">Last Name</label><br>
+        <input type="text" name="txt2" placeholder="Your last name.."><br><br>
+        <label for="txt3" style="margin-left:-270px;">Username</label><br>
+        <input type="text" name="txt3" placeholder="Choose a username.."><br><br>
+        <label for="txt4" style="margin-left:-302px;">Email</label><br>
+        <input type="text" name="txt4" placeholder="Your email.."><br><br>
+        <label for="txt5" style="margin-left:-90px;">Password (6 or more characters)</label><br>
+        <input type="password" name="txt5" placeholder="Enter password.."><br>
+        <span class="pass">Re-type Password</span><br>
+<input type="password" name="txt6"
+placeholder="Re-enter password.." id="pass"><br>
+        <span class="text">By clicking Sign up, you agree to
+our User Agreement,<br> Privacy Policy, and Cookie
+Policy.</span>
+        <input type="submit" value="Sign up" style="font-family:Montserrat;font-size: 12pt;">
+        </form>
+    
+        </div></center>
+    <script>
+    function validatesignup(){
+        var a=frm.txt1.value;
+        var b=frm.txt2.value;
+        var c=frm.txt3.value;
+        var d=frm.txt4.value;
+        var e=frm.txt5.value;
+        
+        if(a==""){
+            alert("Please enter all fields.");
+            return false;
+        }
+        if(b==""){
+            alert("Please enter all fields.");
+            return false;
+        }
+        if(c==""){
+            alert("Please enter all fields.");
+            return false;
+        }
+        if(d==""){
+            alert("Please enter all fields.");
+            return false;
+        }
+        if(e==""){
+            alert("Please enter all fields.");
+            return false;
+        }
+        if(e.length<6){
+            alert("Password should be at least 6 characters long.");
+            return false;
+        }
+    }
+    
+    </script>
+    </body>
+</html>
