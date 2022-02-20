@@ -180,8 +180,9 @@ text-decoration: underline;
 
     }
     .bgimg img {
-        width: 96vw;
-        height: 150px;
+        /* width: 96vw;
+        height: 150px; */
+        display: none;
         /* margin-left: -50px;
         margin-top: -50px; */
     }
