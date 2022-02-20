@@ -1,6 +1,6 @@
 # Heartbeat
 
-Your one stop to get your favourite music.
+Your one stop to get your favourite music anywhere you want.
 
 ## View Here
 
