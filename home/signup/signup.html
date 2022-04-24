@@ -1,0 +1,87 @@
+<html>
+<head>
+    <title>Heartbeat - Sign up</title>
+    <link rel="stylesheet" href="../../style/signup.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="container">
+        <div id="head">Sign Up</div>
+        <div class="box">
+            <form method="POST" action="signup.php" name="frm" onsubmit="return validatesignup()">
+                <div class="form-grp">
+                    <label for="txt1">First Name</label>
+                    <input type="text" name="txt1" placeholder="Your name..">
+                </div>
+                <div class="form-grp">
+                    <label for="txt2">Last Name</label>
+                    <input type="text" name="txt2" placeholder="Your last name..">
+                </div>
+                <div class="form-grp">
+                    <label for="txt3">Username</label>
+                    <input type="text" name="txt3" placeholder="Choose a username..">
+                </div>
+                <div class="form-grp">
+                    <label for="txt4">Email</label>
+                    <input type="text" name="txt4" placeholder="Your email..">
+                </div>
+                <div class="form-grp">
+                    <label for="txt5">Password (6 or more characters)</label>
+                    <input type="password" name="txt5" placeholder="Enter password..">
+                </div>
+                <div class="form-grp">
+                    <label for="txt6" class="pass">Re-type Password</label>
+                    <input type="password" name="txt6" placeholder="Re-enter password.." id="pass">
+                </div>
+                <div class="text">By clicking Sign up, you agree to
+                    our User Agreement, Privacy Policy and Cookie
+                    Policy.</div>
+                <div class="form-grp">
+                    <input type="submit" value="Sign up">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        function validatesignup() {
+            var a = frm.txt1.value;
+            var b = frm.txt2.value;
+            var c = frm.txt3.value;
+            var d = frm.txt4.value;
+            var e = frm.txt5.value;
+            var f = frm.txt6.value;
+
+            if (a == "") {
+                alert("Please enter all fields.");
+                return false;
+            }
+            if (b == "") {
+                alert("Please enter all fields.");
+                return false;
+            }
+            if (c == "") {
+                alert("Please enter all fields.");
+                return false;
+            }
+            if (d == "") {
+                alert("Please enter all fields.");
+                return false;
+            }
+            if (e == "") {
+                alert("Please enter all fields.");
+                return false;
+            }
+            if (e.length < 6) {
+                alert("Password should be at least 6 characters long.");
+                return false;
+            }
+            if (e != f) {
+                alert("Passwords do not match.");
+                return false;
+            }
+        }
+
+    </script>
+</body>
+</html>
